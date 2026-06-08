@@ -1,5 +1,6 @@
 package com.nbgraciano.workshopmongo.domain;
 
+import com.nbgraciano.workshopmongo.dto.AuthorDTO;
 import org.springframework.data.annotation.Id;
 
 import java.util.Date;
@@ -10,10 +11,10 @@ public class Post {
     private Date data;
     private String title;
     private String body;
-    private User author;
+    private AuthorDTO author;
     public Post(){};
 
-    public Post(String id,Date data, String title, String body,User author) {
+    public Post(String id,Date data, String title, String body,AuthorDTO author) {
         this.data = data;
         this.title = title;
         this.body = body;
@@ -53,11 +54,11 @@ public class Post {
         this.body = body;
     }
 
-    public User getAuthor() {
+    public AuthorDTO getAuthor() {
         return author;
     }
 
-    public void setAuthor(User author) {
+    public void setAuthor(AuthorDTO author) {
         this.author = author;
     }
 
