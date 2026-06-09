@@ -1,9 +1,12 @@
 package com.nbgraciano.workshopmongo.domain;
 
 import com.nbgraciano.workshopmongo.dto.AuthorDTO;
+import com.nbgraciano.workshopmongo.dto.CommentDTO;
 import org.springframework.data.annotation.Id;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Post {
     @Id
@@ -12,6 +15,9 @@ public class Post {
     private String title;
     private String body;
     private AuthorDTO author;
+    private List<CommentDTO>comments = new ArrayList<>();
+
+
     public Post(){};
 
     public Post(String id,Date data, String title, String body,AuthorDTO author) {
@@ -60,6 +66,14 @@ public class Post {
 
     public void setAuthor(AuthorDTO author) {
         this.author = author;
+    }
+
+    public List<CommentDTO> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<CommentDTO> comments) {
+        this.comments = comments;
     }
 
     @Override
