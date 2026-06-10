@@ -11,7 +11,7 @@ import java.util.List;
 public class Post {
     @Id
     private String id;
-    private Date data;
+    private Date date;
     private String title;
     private String body;
     private AuthorDTO author;
@@ -20,8 +20,8 @@ public class Post {
 
     public Post(){};
 
-    public Post(String id,Date data, String title, String body,AuthorDTO author) {
-        this.data = data;
+    public Post(String id,Date date, String title, String body,AuthorDTO author) {
+        this.date = date;
         this.title = title;
         this.body = body;
         this.id = id;
@@ -36,12 +36,12 @@ public class Post {
         this.title = title;
     }
 
-    public Date getData() {
-        return data;
+    public Date getDate() {
+        return date;
     }
 
-    public void setData(Date data) {
-        this.data = data;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public String getId() {
